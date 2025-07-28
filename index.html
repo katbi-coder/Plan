@@ -10,39 +10,111 @@
     <style>
         body {
             font-family: 'Tajawal', Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(120deg, #f8fafc 0%, #e9ecef 100%);
+            color: #222;
         }
         header {
-            background-color: #333;
+            background: linear-gradient(90deg, #005c97 0%, #363795 100%);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 30px 0 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            padding: 0 0 0 0;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 18px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #363795;
+            font-weight: 500;
+            font-size: 1.05em;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #005c97;
         }
         main {
-            margin: 20px;
+            margin: 30px auto 30px auto;
+            max-width: 900px;
+            padding: 0 16px;
         }
-        h1, h2, h3 {
-            color: #333;
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 0.2em;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: #363795;
+            font-size: 1.3em;
+            margin-top: 0.5em;
+        }
+        h3 {
+            color: #005c97;
         }
         section {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
             background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 22px 20px 18px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(54,55,149,0.07);
+            border-right: 4px solid #005c97;
+            transition: box-shadow 0.2s;
+        }
+        section:hover {
+            box-shadow: 0 4px 16px rgba(54,55,149,0.13);
         }
         ul {
-            margin-left: 20px;
+            margin-left: 0;
+            padding-right: 20px;
         }
         .content-section {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .highlight {
-            color: #007bff;
+            color: #005c97;
             font-weight: bold;
+        }
+        footer {
+            background: #363795;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0 10px 0;
+            font-size: 1em;
+            letter-spacing: 0.5px;
+            margin-top: 40px;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 -2px 8px rgba(54,55,149,0.07);
+        }
+        @media (max-width: 600px) {
+            main {
+                margin: 10px;
+                padding: 0 2px;
+            }
+            section {
+                padding: 12px 6px 10px 6px;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 8px 0;
+            }
         }
     </style>
 </head>
@@ -50,8 +122,16 @@
     <header>
         <h1>خطة العمل لمشروع منصة تعليمية قائمة على الذكاء الاصطناعي</h1>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#section1">البحث وتحليل السوق</a></li>
+            <li><a href="#section5">تطوير المنصة</a></li>
+            <li><a href="#section7">التسويق والإطلاق</a></li>
+            <li><a href="#section10">إدارة المخاطر</a></li>
+        </ul>
+    </nav>
     <main>
-        <section>
+        <section id="section1">
             <h2>1. البحث وتحليل السوق</h2>
             <div class="content-section">
                 <p><strong>المهام:</strong></p>
@@ -109,7 +189,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="section5">
             <h2>5. تطوير المنصة</h2>
             <div class="content-section">
                 <p><strong>المهام:</strong></p>
@@ -139,7 +219,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="section7">
             <h2>7. التسويق والإطلاق الأولي</h2>
             <div class="content-section">
                 <p><strong>المهام:</strong></p>
@@ -182,7 +262,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="section10">
             <h2>10. إدارة المخاطر والتخطيط للطوارئ</h2>
             <div class="content-section">
                 <p><strong>المهام:</strong></p>
@@ -210,6 +290,9 @@
         </section>
 
     </main>
+    <footer>
+        &copy; 2025 منصة تعليمية قائمة على الذكاء الاصطناعي. جميع الحقوق محفوظة.
+    </footer>
 </body>
 </html>
 
