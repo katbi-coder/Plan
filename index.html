@@ -1,45 +1,232 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خطة العمل لمشروع منصة تعليمية قائمة على الذكاء الاصطناعي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Tajawal', 'Segoe UI', 'Noto Sans Arabic', 'Arial Unicode MS', sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2c3e50;
         }
         header {
-            background-color: #333;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 40px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
         }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
         main {
-            margin: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
-        h1, h2, h3 {
-            color: #333;
+        
+        h1 {
+            color: #fff;
+            margin: 0;
         }
-        section {
+        
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            font-weight: 600;
             margin-bottom: 20px;
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
         }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #e74c3c, #f39c12);
+        }
+        
+        h3 {
+            color: #34495e;
+            font-weight: 500;
+        }
+        
+        section {
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ecf0f1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #3498db, #2980b9);
+            border-radius: 0 15px 15px 0;
+        }
+        
         ul {
-            margin-left: 20px;
+            margin-right: 30px;
+            margin-left: 0;
+            padding-right: 20px;
+            padding-left: 0;
         }
+        
+        li {
+            margin-bottom: 10px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+        
         .content-section {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
+        
         .highlight {
-            color: #007bff;
-            font-weight: bold;
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* Professional badge styling for section numbers */
+        section h2 {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            margin: -30px -30px 20px -30px;
+            padding: 20px 30px;
+            border-radius: 15px 15px 0 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px 10px;
+            }
+            
+            section {
+                padding: 20px;
+                border-radius: 10px;
+            }
+            
+            section h2 {
+                margin: -20px -20px 15px -20px;
+                padding: 15px 20px;
+                font-size: 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            ul {
+                margin-right: 20px;
+                padding-right: 15px;
+            }
+        }
+        
+        /* Additional professional elements */
+        .time-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-right: 10px;
+            box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3);
+        }
+        
+        .tools-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #17a2b8 0%, #6f42c1 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-right: 10px;
+            box-shadow: 0 2px 10px rgba(23, 162, 184, 0.3);
+        }
+        
+        /* Enhanced list styling */
+        li {
+            position: relative;
+            padding-right: 25px;
+        }
+        
+        li::before {
+            content: '▶';
+            position: absolute;
+            right: 0;
+            color: #3498db;
+            font-size: 0.8rem;
+            top: 2px;
+        }
+        
+        /* Footer-like attribution */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -58,8 +245,8 @@
                     <li>إجراء استطلاع آراء الطلاب حول احتياجاتهم التعليمية عبر Google Forms أو SurveyMonkey.</li>
                     <li>استخدام Google Trends و SEMrush لتحليل الكلمات المفتاحية المتعلقة بالتعليم الرقمي.</li>
                 </ul>
-                <p><strong>الأدوات والتقنيات:</strong> Google Trends، SEMrush، SurveyMonkey، Google Forms.</p>
-                <p><strong>الوقت المتوقع:</strong> 4 ساعات يوميًا.</p>
+                <p><strong>الأدوات والتقنيات:</strong> <span class="tools-badge">Google Trends، SEMrush، SurveyMonkey، Google Forms</span></p>
+                <p><strong>الوقت المتوقع:</strong> <span class="time-badge">4 ساعات يوميًا</span></p>
             </div>
         </section>
 
@@ -72,8 +259,8 @@
                     <li>إعداد جدول زمني باستخدام Trello أو Asana.</li>
                     <li>إعداد ميزانية المشروع باستخدام Google Sheets أو Excel.</li>
                 </ul>
-                <p><strong>الأدوات والتقنيات:</strong> Google Sheets، Trello، Asana.</p>
-                <p><strong>الوقت المتوقع:</strong> 5 ساعات يوميًا.</p>
+                <p><strong>الأدوات والتقنيات:</strong> <span class="tools-badge">Google Sheets، Trello، Asana</span></p>
+                <p><strong>الوقت المتوقع:</strong> <span class="time-badge">5 ساعات يوميًا</span></p>
             </div>
         </section>
 
@@ -87,8 +274,8 @@
                     <li>اختيار منصات الاستضافة السحابية مثل Google Cloud أو AWS.</li>
                     <li>إعداد أدوات التعاون بين الفريق مثل Slack و GitHub.</li>
                 </ul>
-                <p><strong>الأدوات والتقنيات:</strong> Google Cloud، AWS، GitHub، Django، React.js.</p>
-                <p><strong>الوقت المتوقع:</strong> 5 ساعات يوميًا.</p>
+                <p><strong>الأدوات والتقنيات:</strong> <span class="tools-badge">Google Cloud، AWS، GitHub، Django، React.js</span></p>
+                <p><strong>الوقت المتوقع:</strong> <span class="time-badge">5 ساعات يوميًا</span></p>
             </div>
         </section>
 
@@ -101,8 +288,8 @@
                     <li>اختبار النماذج مع مجموعة صغيرة من الطلاب لجمع ملاحظاتهم.</li>
                     <li>تحليل نتائج اختبار تجربة المستخدم وتحسين التصميم بناءً على الملاحظات.</li>
                 </ul>
-                <p><strong>الأدوات والتقنيات:</strong> Figma، Adobe XD، Hotjar، Lookback.io.</p>
-                <p><strong>الوقت المتوقع:</strong> 5-6 ساعات يوميًا.</p>
+                <p><strong>الأدوات والتقنيات:</strong> <span class="tools-badge">Figma، Adobe XD، Hotjar، Lookback.io</span></p>
+                <p><strong>الوقت المتوقع:</strong> <span class="time-badge">5-6 ساعات يوميًا</span></p>
             </div>
         </section>
 
@@ -207,6 +394,10 @@
         </section>
 
     </main>
+    
+    <div class="footer">
+        <p>خطة عمل شاملة لمشروع منصة تعليمية متطورة • مصممة بعناية لضمان النجاح والتميز</p>
+    </div>
 </body>
 </html>
 
